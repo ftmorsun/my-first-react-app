@@ -28,6 +28,8 @@ import './styles.css';
 // var ReactDOM=require("react-dom");
 import React from "react";
 import ReactDOM from "react-dom";
+import Heading from "./Heading"
+import List from "./List";
 const name="Ahmet";
 const lName="Bayram";
 // TASK 2: Render your favorite number on the page in a paragraph and print: 
@@ -73,18 +75,35 @@ var fname="fatma";
 //   );
 // }
 const myStyle={color:"orange"};
-myStyle.color="blue";
+let greeting="Hello";
+const currentTime=new Date().getHours();
+console.log(currentTime);
+//Create a ternary to assign values within
+currentTime < 12 ? [greeting, myStyle.color] = ["Good Morniing", "red"] :
+                  (currentTime < 18 ? [greeting, myStyle.color] = [ "Good Afternoon", "orange"]:
+                                      [greeting, myStyle.color] = [ "Good Night", "grey"]);
+
+function Main(props){
+  return (<section>
+    <h2>Our {props.adj} Models Here</h2>
+    { props.images.map((imh)=>(<img src={imh}></img>))}
+</section>);
+}
+
+
 function App() {
   return (
     < >
-    style={myStyle}
-    <h1 className="heading" contentEditable="true">
-
-           Learn React
- 
-      </h1>
-      <img className="kebab-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Lula_kebab_2.jpg/2880px-Lula_kebab_2.jpg" ></img>
-      <img className="cat-img" src="https://secure.img1-fg.wfcdn.com/im/08892826/resize-h800%5Ecompr-r85/4307/43073707/Playing+Tabby+Kitten+Statue.jpg" />
+      <Heading />
+       <h1 
+        style={myStyle}
+        className="heading" 
+        contentEditable="true"
+        spellCheck="false">{greeting}</h1>
+        <list />
+        <img className="kebab-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Lula_kebab_2.jpg/2880px-Lula_kebab_2.jpg"/>
+        <img className="cat-img" src="https://secure.img1-fg.wfcdn.com/im/08892826/resize-h800%5Ecompr-r85/4307/43073707/Playing+Tabby+Kitten+Statue.jpg" />
+       
     </>
   );
 }
