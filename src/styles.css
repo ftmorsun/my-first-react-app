@@ -1,4 +1,14 @@
-.heading {
-    color:green;
-   
+.heading{
+    color: red;
+}
+.kebab-img{
+  height: 100px;
+  width: 100px;
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.cat-img {
+  height: 100px;
+  width: 100px;
 }

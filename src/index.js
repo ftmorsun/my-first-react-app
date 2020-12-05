@@ -1,7 +1,7 @@
 /************************************************ */
 // import React from 'react';
 // import ReactDOM from 'react-dom';
-// import './index.css';
+import './styles.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
@@ -53,26 +53,41 @@ var num = Math.floor(Math.random()*100);
 const currentYear = new Date().getFullYear();
 var fname="fatma";
 
-function Welcome(props) {
-  return <h1 className="heading">Hello, {props.name}</h1>;
-}
+// function Welcome(props) {
+//   return <h1 className="heading">Hello, {props.name}</h1>;
+// }
 
-function App() {
-  let num2 = Math.floor(Math.random()*100);
-  return (
-    <div>
-      <Welcome name="Sara" />
-      <Welcome name="Cahal" />
-      <Welcome name="Edite" />
-      <p > My Favorite Number is {num}</p>
+// function App() {
+//   let num2 = Math.floor(Math.random()*100);
+//   return (
+//     <div>
+//       <Welcome name="Sara" />
+//       <Welcome name="Cahal" />
+//       <Welcome name="Edite" />
+//       <p > My Favorite Number is {num}</p>
     
-      <p> My Favorite Number is {num2 + num}</p>
+//       <p> My Favorite Number is {num2 + num}</p>
       
-      <p> Created by {fname} <br></br> Copyright {currentYear}</p>
-    </div>
+//       <p> Created by {fname} <br></br> Copyright {currentYear}</p>
+//     </div>
+//   );
+// }
+const myStyle={color:"orange"};
+myStyle.color="blue";
+function App() {
+  return (
+    < >
+    style={myStyle}
+    <h1 className="heading" contentEditable="true">
+
+           Learn React
+ 
+      </h1>
+      <img className="kebab-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Lula_kebab_2.jpg/2880px-Lula_kebab_2.jpg" ></img>
+      <img className="cat-img" src="https://secure.img1-fg.wfcdn.com/im/08892826/resize-h800%5Ecompr-r85/4307/43073707/Playing+Tabby+Kitten+Statue.jpg" />
+    </>
   );
 }
-
 ReactDOM.render(
   <App />,
   document.getElementById('root')
